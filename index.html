@@ -87,16 +87,17 @@
 </head>
 <body class="relative min-h-screen flex items-center justify-center antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- REPRODUCTOR DE AUDIO DE FONDO (Pista Instrumental Elegante) -->
+    <!-- REPRODUCTOR DE AUDIO CON TU ARCHIVO LOCAL OPUS -->
     <audio id="bg-music" loop preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=cinematic-time-lapse-115672.mp3" type="audio/mp3">
+        <source src="./LMFAO - Party Rock Anthem (Lyrics) ft. Lauren Bennett, GoonRock (1).opus" type="audio/ogg; codecs=opus">
+        <source src="./LMFAO - Party Rock Anthem (Lyrics) ft. Lauren Bennett, GoonRock (1).opus" type="audio/opus">
     </audio>
 
     <!-- BOTÓN FLOTANTE DE MÚSICA (TOP-RIGHT) -->
     <button id="music-btn" class="fixed top-5 right-5 z-50 flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/15 hover:border-amber-400/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] cursor-pointer">
         <span id="music-text" class="text-[10px] uppercase font-sans tracking-[0.2em] text-gray-300 font-semibold">Música</span>
         
-        <!-- Ecualizador de barras -->
+        <!-- Ecualizador de barras doradas -->
         <div id="equalizer" class="flex items-end gap-[2px] h-3.5 w-3.5">
             <span class="bar-1 w-[2px] h-[3px] bg-amber-400 rounded-full"></span>
             <span class="bar-2 w-[2px] h-[3px] bg-amber-400 rounded-full"></span>
@@ -304,8 +305,8 @@
                     equalizer.classList.add('playing');
                     musicText.innerText = 'Música';
                     isPlaying = true;
-                }).catch(() => {
-                    console.log("Interacción requerida por el navegador");
+                }).catch((err) => {
+                    console.log("Interacción requerida por el navegador para reproducir:", err);
                 });
             }
         }
