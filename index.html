@@ -64,40 +64,48 @@
             box-shadow: 0 0 30px rgba(255, 199, 0, 0.75);
         }
 
-        /* Capas de Parallax optimizadas para móvil */
+        /* Capas de Parallax Ultra Estables en Móvil */
         .parallax-layer {
             will-change: transform;
             pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120vh;
         }
     </style>
 </head>
 <body class="relative min-h-screen flex items-center justify-center antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- FONDO PARALLAX DE 3 CAPAS (Sutil, sin parpadeo y estable en móviles) -->
+    <!-- FONDO PARALLAX DE 3 CAPAS (Estrellas pequeñas, sutiles y estables en móvil) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         
-        <!-- CAPA 1: Fondo Lejano (Estrellas pequeñas, opacidad 20%, movimiento lento) -->
-        <div id="parallax-layer-1" class="parallax-layer fixed inset-0 w-full h-full opacity-20 text-white">
-            <svg class="absolute top-[5%] left-[12%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[22%] right-[18%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[42%] left-[8%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[65%] right-[15%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[88%] left-[25%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <!-- CAPA 1: Lejana (Estrellas mini, opacidad 20%, velocidad 0.05x) -->
+        <div id="parallax-layer-1" class="parallax-layer opacity-20 text-white">
+            <svg class="absolute top-[40px] left-[10%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[180px] right-[15%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[380px] left-[8%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[580px] right-[12%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[780px] left-[20%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[980px] right-[25%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
         </div>
 
-        <!-- CAPA 2: Plano Medio (Estrellas medianas, opacidad 30%, movimiento medio) -->
-        <div id="parallax-layer-2" class="parallax-layer fixed inset-0 w-full h-full opacity-30 text-amber-100">
-            <svg class="absolute top-[12%] right-[8%] w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[32%] left-[22%] w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[58%] right-[22%] w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[78%] left-[12%] w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <!-- CAPA 2: Media (Estrellas pequeñas, opacidad 25%, velocidad 0.12x) -->
+        <div id="parallax-layer-2" class="parallax-layer opacity-25 text-amber-100">
+            <svg class="absolute top-[110px] right-[8%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[290px] left-[18%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[490px] right-[20%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[690px] left-[14%] w-2 h-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[890px] right-[10%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
         </div>
 
-        <!-- CAPA 3: Primer Plano (Estrellas ligeramente más marcadas, opacidad 40%, movimiento rápido) -->
-        <div id="parallax-layer-3" class="parallax-layer fixed inset-0 w-full h-full opacity-40 text-amber-200">
-            <svg class="absolute top-[18%] left-[82%] w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[48%] right-[80%] w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
-            <svg class="absolute top-[72%] left-[85%] w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <!-- CAPA 3: Cercana (Estrellas delicadas, opacidad 30%, velocidad 0.22x) -->
+        <div id="parallax-layer-3" class="parallax-layer opacity-30 text-amber-200">
+            <svg class="absolute top-[150px] left-[80%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[420px] left-[78%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[650px] left-[82%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            <svg class="absolute top-[880px] left-[15%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
         </div>
 
     </div>
@@ -274,17 +282,17 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Parallax de 3 capas ultra suave (optimizado para rendimiento en móvil)
+        // Parallax de 3 capas ultra estable (sin tirones al ocultar la barra del navegador en móvil)
         let ticking = false;
         const l1 = document.getElementById('parallax-layer-1');
         const l2 = document.getElementById('parallax-layer-2');
         const l3 = document.getElementById('parallax-layer-3');
 
         function updateParallax() {
-            const scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            if (l1) l1.style.transform = `translate3d(0, ${scrolled * -0.08}px, 0)`;
-            if (l2) l2.style.transform = `translate3d(0, ${scrolled * -0.18}px, 0)`;
-            if (l3) l3.style.transform = `translate3d(0, ${scrolled * -0.32}px, 0)`;
+            const scrolled = window.pageYOffset || document.documentElement.scrollTop || 0;
+            if (l1) l1.style.transform = `translate3d(0, ${scrolled * -0.05}px, 0)`;
+            if (l2) l2.style.transform = `translate3d(0, ${scrolled * -0.12}px, 0)`;
+            if (l3) l3.style.transform = `translate3d(0, ${scrolled * -0.22}px, 0)`;
             ticking = false;
         }
 
