@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Gala - Graduación</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes Tipográficas Modernas y Elegantes (Sin Cursiva) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Texto en Oro Metálico Pulido */
+        .gold-metallic-text {
+            background: linear-gradient(135deg, #FFF6AD 0%, #FDA837 30%, #D4AF37 50%, #E6C875 75%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Neón Elegante en Contorno */
+        .neon-title {
+            color: #fff;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 22px rgba(255, 255, 255, 0.4));
+        }
+
+        /* Brillo de Texto Neón Blanco Sólido */
+        .neon-number {
+            color: #ffffff;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 22px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Botón Dorado Elegante */
+        .gold-pill-btn {
+            background: linear-gradient(135deg, #FFC700 0%, #E09600 100%);
+            box-shadow: 0 0 20px rgba(255, 199, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .gold-pill-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 30px rgba(255, 199, 0, 0.75);
+        }
+
+        /* Destellos Titilantes */
+        .sparkle {
+            animation: twinkle 2.5s infinite alternate ease-in-out;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex items-center justify-center antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
+
+    <!-- Fondo de Destellos Decorativos -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
+        <svg class="absolute top-12 left-[10%] w-4 h-4 sparkle text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <svg class="absolute top-28 right-[10%] w-5 h-5 sparkle text-amber-200" fill="currentColor" viewBox="0 0 24 24" style="animation-delay: 0.8s;"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <svg class="absolute bottom-36 left-[8%] w-4 h-4 sparkle text-white/80" fill="currentColor" viewBox="0 0 24 24" style="animation-delay: 0.4s;"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+        <svg class="absolute bottom-16 right-[12%] w-5 h-5 sparkle text-amber-100" fill="currentColor" viewBox="0 0 24 24" style="animation-delay: 1.2s;"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+    </div>
+
+    <!-- Contenedor Principal de la Invitación -->
+    <main class="relative z-10 w-full max-w-md mx-auto px-6 py-8 flex flex-col items-center text-center">
+        
+        <!-- Hilo de la Bola de Disco -->
+        <div class="w-[1.5px] h-12 bg-gradient-to-b from-gray-500 to-gray-200 absolute top-0"></div>
+
+        <!-- Bola de Disco Pixabay -->
+        <div class="relative mt-4 mb-4">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/13/23/disco-ball-160937_960_720.png" 
+                 alt="Bola de Disco" 
+                 class="w-32 h-32 md:w-36 md:h-36 object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+        </div>
+
+        <!-- Encabezado Superior -->
+        <p class="font-cinzel text-xs tracking-[0.35em] text-gray-300 font-semibold uppercase mb-2">
+            Bachilleres JW
+        </p>
+
+        <!-- Título Neón Principal -->
+        <h1 class="font-sans text-3xl md:text-4xl font-extrabold neon-title uppercase leading-tight mb-4 tracking-[0.06em]">
+            Una noche<br>
+            única con la<br>
+            promo
+        </h1>
+
+        <!-- Texto Dorado de Gala (Moderno Serif, Sin Cursiva) -->
+        <p class="font-serif font-medium gold-metallic-text text-xl md:text-2xl leading-relaxed my-3 px-2 tracking-wide">
+            La promo 2026 se viste de gala para celebrar una noche inolvidable.
+        </p>
+
+        <!-- Línea Separadora Elegante -->
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-3"></div>
+
+        <!-- Sección de Fecha (Domingo 20 Septiembre 2026, 6:30 PM) -->
+        <div class="w-full my-4">
+            <p class="font-cinzel text-xs tracking-[0.3em] uppercase text-gray-300 font-semibold mb-3">
+                ¡Aparta la Fecha!
+            </p>
+
+            <div class="flex items-center justify-center gap-5">
+                <div class="flex-1 text-right">
+                    <p class="font-sans text-sm tracking-[0.15em] uppercase text-gray-200 font-bold">Domingo</p>
+                </div>
+                
+                <div class="w-[1px] h-12 bg-white/60"></div>
+                
+                <div class="flex flex-col items-center">
+                    <span class="font-sans text-5xl md:text-6xl font-extrabold neon-title leading-none">20</span>
+                </div>
+                
+                <div class="w-[1px] h-12 bg-white/60"></div>
+                
+                <div class="flex-1 text-left">
+                    <p class="font-sans text-sm tracking-[0.15em] uppercase text-gray-200 font-bold whitespace-nowrap">6:30 PM</p>
+                </div>
+            </div>
+
+            <p class="font-cinzel text-xs tracking-[0.3em] uppercase text-amber-200/90 font-semibold mt-2">
+                Septiembre 2026
+            </p>
+        </div>
+
+        <!-- Contador Dinámico Minimalista y Limpio (Sin cajas) -->
+        <div class="my-5 w-full">
+            <p class="font-cinzel text-[10px] tracking-[0.3em] uppercase text-gray-400 font-semibold mb-3">Faltan Exactamente</p>
+            
+            <div class="flex items-center justify-center gap-5 md:gap-7 text-center font-cinzel">
+                <!-- Días -->
+                <div class="flex flex-col items-center">
+                    <span id="days" class="text-2xl md:text-3xl font-bold tracking-wider text-white neon-number">00</span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-gray-400 mt-1 font-sans">Días</span>
+                </div>
+                
+                <span class="text-amber-300/80 text-lg font-light -mt-3.5 opacity-60">•</span>
+                
+                <!-- Horas -->
+                <div class="flex flex-col items-center">
+                    <span id="hours" class="text-2xl md:text-3xl font-bold tracking-wider text-white neon-number">00</span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-gray-400 mt-1 font-sans">Horas</span>
+                </div>
+                
+                <span class="text-amber-300/80 text-lg font-light -mt-3.5 opacity-60">•</span>
+                
+                <!-- Minutos -->
+                <div class="flex flex-col items-center">
+                    <span id="minutes" class="text-2xl md:text-3xl font-bold tracking-wider text-white neon-number">00</span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-gray-400 mt-1 font-sans">Min</span>
+                </div>
+                
+                <span class="text-amber-300/80 text-lg font-light -mt-3.5 opacity-60">•</span>
+                
+                <!-- Segundos -->
+                <div class="flex flex-col items-center">
+                    <span id="seconds" class="text-2xl md:text-3xl font-bold tracking-wider text-amber-300">00</span>
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-gray-400 mt-1 font-sans">Seg</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ubicación / Recepción -->
+        <div class="my-5 w-full">
+            <p class="font-cinzel text-xs md:text-sm tracking-[0.25em] uppercase font-bold text-gray-200 mb-3">
+                Recepción: La Gran Mansión
+            </p>
+            
+            <!-- Botón de Mapa con Ícono SVG -->
+            <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-2 border border-white/40 text-white rounded-full text-xs font-semibold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition duration-300">
+                <span>Ver Mapa</span>
+                <svg class="w-4 h-4 text-amber-300 transition-colors group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Código de Vestimenta -->
+        <div class="my-4">
+            <p class="font-cinzel text-xs md:text-sm tracking-[0.2em] uppercase text-gray-300">
+                Código de Vestimenta: 
+                <span class="font-sans font-extrabold text-sm md:text-base tracking-[0.25em] gold-metallic-text ml-1">FORMAL</span>
+            </p>
+        </div>
+
+        <!-- Confirmación de Asistencia (WhatsApp Directo +58 4123972266) -->
+        <div class="mt-6 mb-4 w-full">
+            <p class="font-serif text-white text-lg md:text-xl mb-3 leading-snug tracking-wide">
+                Tu presencia hará de esta noche un momento inolvidable
+            </p>
+            
+            <p class="font-sans text-xs tracking-[0.2em] uppercase text-gray-300 font-semibold mb-3">
+                Por favor confirma tu asistencia
+            </p>
+            
+            <a href="https://wa.me/584123972266?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20Fiesta%20de%20Graduación%20🎓🎉" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="inline-flex items-center justify-center gold-pill-btn text-black font-extrabold uppercase tracking-[0.15em] py-3 px-9 rounded-full text-xs md:text-sm font-sans">
+                <span>CONFIRMA AQUÍ</span>
+                <svg class="w-4 h-4 ml-2 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Contador de Tiempo Restante Funcional hacia el 20 de Septiembre de 2026, 18:30 -->
+    <script>
+        const eventDate = new Date("September 20, 2026 18:30:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = eventDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            } else {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
