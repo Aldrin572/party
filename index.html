@@ -78,11 +78,11 @@
 </head>
 <body class="relative min-h-screen flex items-center justify-center antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- FONDO PARALLAX DE 3 CAPAS -->
+    <!-- FONDO PARALLAX DE 3 CAPAS CON GRADUACIÓN DE INTENSIDAD (10% -> 20% -> 38%) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         
-        <!-- CAPA 1: Fondo Lejano (Opacidad tenue 12%, velocidad 0.05x) -->
-        <div id="parallax-layer-1" class="parallax-layer opacity-12 text-white">
+        <!-- CAPA 1: Fondo Lejano (La más tenue y suave: 10% de opacidad, velocidad 0.05x) -->
+        <div id="parallax-layer-1" class="parallax-layer opacity-[0.10] text-white">
             <svg class="absolute top-[40px] left-[8%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
             <svg class="absolute top-[240px] right-[10%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
             <svg class="absolute top-[440px] left-[12%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
@@ -92,8 +92,8 @@
             <svg class="absolute top-[1300px] left-[14%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
         </div>
 
-        <!-- CAPA 2: Plano Medio (Opacidad sutil 18%, velocidad 0.12x) -->
-        <div id="parallax-layer-2" class="parallax-layer opacity-18 text-amber-100">
+        <!-- CAPA 2: Plano Medio (Intensidad media: 20% de opacidad, velocidad 0.12x) -->
+        <div id="parallax-layer-2" class="parallax-layer opacity-[0.20] text-amber-100">
             <svg class="absolute top-[120px] left-[22%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
             <svg class="absolute top-[340px] right-[20%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
             <svg class="absolute top-[550px] left-[18%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
@@ -102,8 +102,8 @@
             <svg class="absolute top-[1220px] right-[18%] w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
         </div>
 
-        <!-- CAPA 3: Primer Plano (Opacidad tenue 25%, velocidad 0.22x) -->
-        <div id="parallax-layer-3" class="parallax-layer opacity-25 text-amber-200">
+        <!-- CAPA 3: Primer Plano (La más definida y brillante del fondo: 38% de opacidad, velocidad 0.22x) -->
+        <div id="parallax-layer-3" class="parallax-layer opacity-[0.38] text-amber-200">
             <svg class="absolute top-[160px] right-[6%] w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
             <svg class="absolute top-[380px] left-[5%] w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"/></svg>
             <svg class="absolute top-[600px] right-[8%] w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
