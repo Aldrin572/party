@@ -87,7 +87,7 @@
 </head>
 <body class="relative min-h-screen flex items-center justify-center antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- REPRODUCTOR DE AUDIO CON TU ARCHIVO LOCAL OPUS -->
+    <!-- REPRODUCTOR DE AUDIO LOCAL OPUS -->
     <audio id="bg-music" loop preload="auto">
         <source src="./Party Rock Anthem.opus" type="audio/ogg; codecs=opus">
         <source src="./Party Rock Anthem.opus" type="audio/opus">
@@ -294,6 +294,9 @@
         const musicText = document.getElementById('music-text');
         let isPlaying = false;
 
+        // Volumen de fondo ambiental (25% del total)
+        audio.volume = 0.25;
+
         function toggleMusic() {
             if (isPlaying) {
                 audio.pause();
@@ -316,7 +319,7 @@
             toggleMusic();
         });
 
-        // Inicio automático sutil al primer toque/clic en cualquier parte de la pantalla
+        // Inicio automático al primer toque/clic en cualquier parte de la pantalla
         function initAudioOnFirstTouch() {
             if (!isPlaying) {
                 audio.play().then(() => {
